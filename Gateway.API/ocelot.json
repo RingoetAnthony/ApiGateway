@@ -11,7 +11,7 @@
       ],
 
       "UpstreamPathTemplate": "/order/{everything}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
 
     { // MicroService product
@@ -25,7 +25,7 @@
       ],
       "RouteIsCaseSensitive": false,
       "UpstreamPathTemplate": "/product/{everything}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     }
   ]
 }

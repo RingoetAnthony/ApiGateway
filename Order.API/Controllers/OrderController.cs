@@ -25,7 +25,7 @@ namespace Order.API.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            OrderModel order = _orders.FirstOrDefault(o => o.Id == id);
+            OrderModel? order = _orders.FirstOrDefault(o => o.Id == id);
             if (order is null)
             {
                 return NotFound();
@@ -44,7 +44,7 @@ namespace Order.API.Controllers
         [HttpPut("{id}")]
         public IActionResult Update([FromRoute] int id, [FromBody] OrderModel orderUpdate)
         {
-            OrderModel orderToUpdate = _orders.FirstOrDefault(o => o.Id == id);
+            OrderModel? orderToUpdate = _orders.FirstOrDefault(o => o.Id == id);
             if(orderToUpdate is null)
             {
                 return NotFound();
@@ -59,7 +59,7 @@ namespace Order.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            OrderModel orderModel = _orders.FirstOrDefault(o => o.Id == id);
+            OrderModel? orderModel = _orders.FirstOrDefault(o => o.Id == id);
             if (orderModel is null)
             {
                 return NotFound();
